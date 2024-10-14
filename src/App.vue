@@ -48,7 +48,7 @@ export default {
       <nav aria-label="Page navigation" class="d-flex justify-content-center my-5">
         <ul class="pagination">
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous" @click="changePage(current_page - 1)">
+            <a class="page-link" href="#" aria-label="Previous" :class="current_page == 1 ? 'disabled' : ''" @click="changePage(current_page - 1)">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
@@ -56,7 +56,7 @@ export default {
             <a class="page-link" href="#" @click="changePage(page)"> {{ page }} </a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next" @click="changePage(current_page + 1)" >
+            <a class="page-link" href="#" aria-label="Next" :class="current_page == last_page ? 'disabled' : ''" @click="changePage(current_page + 1)" >
               <span aria-hidden="true">&raquo;</span>
             </a>
           </li>
