@@ -27,7 +27,7 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="mb-5 pb-5 text-center">I miei progetti</h1>
+          <h1 class="mb-5 pb-5 text-center fw-bolder">I miei progetti</h1>
         </div>
       </div>
       <div class="row gy-4">
@@ -37,5 +37,5 @@ export default {
   </main>
 </template>
 <style lang="scss">
-@import './styles/generals.scss';
+@import './styles/app.scss';
 </style>

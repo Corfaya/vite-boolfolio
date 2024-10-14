@@ -8,18 +8,32 @@ export default {
 </script>
 <template>
 <div class="col-12 col-md-6 col-lg-4">
-    <div class="card">
-        <img :src="project.preview.startsWith('http') ? project.preview : `http://127.0.0.1:8000/storage/${project.preview}`" :alt="project.name" class="card-img-top">
-        <div class="card-title p-3">
-            <h3>{{project.name}} project</h3>
-            <!-- <h5></h5> -->
+    <div class="card text-bg-dark">
+        <div class="img-box"><img :src="project.preview.startsWith('http') ? project.preview : `http://127.0.0.1:8000/storage/${project.preview}`" :alt="project.name" class="card-img-top"></div>
+        <div class="card-title px-3 pt-3">
+            <h3 class="text-warning">{{project.name}}</h3>
+            <p class="m-0">Creato con:</p>
+            <ul v-if="project.technologies" class="list-unstyled d-flex m-0">
+                <li v-for="tech in project.technologies" :key="tech.id" class="pe-2 text-warning">{{tech.name}}</li>
+            </ul>
         </div>
         <div class="card-body">
-            <p class="text-end">Data upload: <strong>{{project.date_of_upload}} </strong></p>
-            <p class="card-text">{{project.description}}</p>
+            <p v-if="project.type" class="text-end">Tipo di lavoro: <strong class="text-warning">{{project.type.name}}</strong></p>
+            <p class="text-end">Data upload: <strong class="text-warning">{{project.date_of_upload}} </strong></p>
+            <p class="card-text mt-5">{{project.description}}</p>
         </div>
     </div>
 </div>
 </template>
 <style lang="scss" scoped>
+.card {
+    min-height: 800px;
+    .img-box {
+        height: 200px;
+        img {
+            max-height: 100%;
+            object-fit: cover;
+        }
+    }
+}
 </style>
