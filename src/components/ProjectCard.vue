@@ -12,10 +12,12 @@ export default {
         <div class="img-box"><img :src="project.preview.startsWith('http') ? project.preview : `http://127.0.0.1:8000/storage/${project.preview}`" :alt="project.name" class="card-img-top"></div>
         <div class="card-title px-3 pt-3">
             <h3 class="text-warning">{{project.name}}</h3>
-            <p class="m-0">Creato con:</p>
-            <ul v-if="project.technologies" class="list-unstyled d-flex m-0">
-                <li v-for="tech in project.technologies" :key="tech.id" class="pe-2 text-warning">{{tech.name}}</li>
-            </ul>
+            <div v-if="project.technologies && project.technologies.length > 0">
+                <p class="m-0">Creato con:</p>
+                <ul class="list-unstyled d-flex m-0">
+                    <li v-for="tech in project.technologies" :key="tech.id" class="pe-2 text-warning">{{tech.name}}</li>
+                </ul>
+            </div>
         </div>
         <div class="card-body">
             <p v-if="project.type" class="text-end">Tipo di lavoro: <strong class="text-warning">{{project.type.name}}</strong></p>
