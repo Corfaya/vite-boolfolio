@@ -15,7 +15,7 @@ export default {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item" v-for="(link, i) in navlinks" :key="i">
-                <a class="nav-link" aria-current="page" href="#">{{ link.label }}</a>
+                <router-link class="nav-link" aria-current="page" :to="{name: link.name}">{{ link.label }}</router-link>
               </li>
             </ul>
           </div>
