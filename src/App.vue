@@ -1,10 +1,12 @@
 <script>
 import axios from 'axios';
+import { store } from './store';
 import AppHeader from './components/AppHeader.vue';
 import ProjectCard from './components/ProjectCard.vue';
 export default {
   data() {
     return {
+      store,
       projects: [],
       current_page: null,
       last_page: null,
@@ -36,7 +38,7 @@ export default {
 }
 </script>
 <template>
-  <AppHeader />
+  <AppHeader :navlinks="store.navLinks"/>
   <main class="py-5">
     <router-view></router-view>
   </main>
