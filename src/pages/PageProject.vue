@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import { store } from '../store';
 import ProjectCard from '../components/ProjectCard.vue';
 export default {
   data() {
@@ -7,7 +8,8 @@ export default {
       projects: [],
       current_page: null,
       last_page: null,
-      first_page: 1
+      first_page: 1,
+      store
     }
   },
   components: {
@@ -18,7 +20,9 @@ export default {
   },
   methods: {
     getProjects() {
-      axios.get('http://127.0.0.1:8000/api/projects').then((res) => {
+        let urlProject = `${store.url}${store.epProjects}`
+        console.log(urlProject)
+      axios.get(urlProject).then((res) => {
         this.projects = res.data.results.data;
         this.current_page = res.data.results.current_page;
         this.last_page = res.data.results.last_page;
@@ -26,7 +30,7 @@ export default {
     },
     changePage(p) {
       this.current_page = p;
-      axios.get('http://127.0.0.1:8000/api/projects', { params: { page: p } }).then((res) => {
+      axios.get(urlProject, { params: { page: p } }).then((res) => {
         this.projects = res.data.results.data;
       })
     }
