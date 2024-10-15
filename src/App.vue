@@ -26,7 +26,7 @@ export default {
     },
     changePage(p) {
       this.current_page = p;
-      axios.get('http://127.0.0.1:8000/api/projects', {params: {page: p}}).then((res) => {
+      axios.get('http://127.0.0.1:8000/api/projects', { params: { page: p } }).then((res) => {
         this.projects = res.data.results.data;
       })
     }
@@ -35,6 +35,9 @@ export default {
 </script>
 <template>
   <main class="py-5">
+    <router-view></router-view>
+  </main>
+  <!-- <main class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -63,7 +66,7 @@ export default {
         </ul>
       </nav>
     </div>
-  </main>
+  </main> -->
 </template>
 <style lang="scss">
 @import './styles/app.scss';
