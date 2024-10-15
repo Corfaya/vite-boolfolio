@@ -5,6 +5,10 @@ export const store = reactive({
         {
             name: 'homepage',
             label: 'Home'
+        },
+        {
+            name: 'projects',
+            label: 'Projects'
         }
     ]
 })
