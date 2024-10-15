@@ -6,9 +6,9 @@ export default {
 }
 </script>
 <template>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Portfolio</a>
+          <div class="logo-box"><img src="../assets/logo-fake.jpg" alt="Logo"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -23,5 +23,13 @@ export default {
       </nav>
 </template>
 <style lang="scss">
-    
+    .logo-box {
+        width: 50px;
+        height: 50px;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    }
 </style>
