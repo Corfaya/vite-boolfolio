@@ -70,4 +70,5 @@ export default {
   </main>
 </template>
 <style lang="scss">
+@import '../styles/app.scss';
 </style>
