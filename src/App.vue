@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios';
+import AppHeader from './components/AppHeader.vue';
 import ProjectCard from './components/ProjectCard.vue';
 export default {
   data() {
@@ -11,7 +12,8 @@ export default {
     }
   },
   components: {
-    ProjectCard
+    ProjectCard,
+    AppHeader
   },
   created() {
     this.getProjects();
@@ -34,6 +36,7 @@ export default {
 }
 </script>
 <template>
+  <AppHeader />
   <main class="py-5">
     <router-view></router-view>
   </main>
