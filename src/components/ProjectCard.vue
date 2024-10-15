@@ -28,8 +28,20 @@ export default {
 </div>
 </template>
 <style lang="scss" scoped>
+@import '../styles/app.scss';
 .card {
-    min-height: 800px;
+    border: none;
+    min-height: 700px;
+    position: relative;
+    transition: all 0.7s ease;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+        transform: translate(-10px, -10px);
+        z-index: 2;
+        box-shadow: 10px 10px 20px #000000b3;
+        background-color: #000;
+    }
     .img-box {
         height: 200px;
         img {

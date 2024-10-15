@@ -1,6 +1,23 @@
 <script>
+import { store } from '../store';
+import axios from 'axios';
+import ProjectCard from '../components/ProjectCard.vue';
 export default {
-
+    data() {
+        return {
+            store,
+            projects: []
+        }
+    },
+    components: {
+        ProjectCard
+    },
+    created() {
+        let urlLatestProject = `${store.url}${store.epLatestProjects}`
+        axios.get(urlLatestProject).then((res) => {
+            this.projects = res.data.results
+        })
+    }
 }
 </script>
 <template>
@@ -18,8 +35,9 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center fw-bolder">I miei ultimi progetti</h2>
+                    <h2 class="text-center fw-bolder py-5">I miei ultimi progetti</h2>
                 </div>
+                <ProjectCard v-for="project in projects" :key="project.id" :project="project"/>
             </div>
         </div>
     </div>
@@ -43,5 +61,8 @@ export default {
 .section {
     background-color: $primaryText;
     color: $hover;
+    h2 {
+        text-shadow: 3px 2px 1px $body;
+    }
 }
 </style>
