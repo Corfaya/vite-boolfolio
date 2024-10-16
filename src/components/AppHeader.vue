@@ -28,6 +28,9 @@ export default {
 </template>
 <style lang="scss">
 @import '../styles/app.scss';
+nav {
+    box-shadow: 0 2px 10px rgb(66, 66, 66);
+}
 .logo-box {
     width: 50px;
     height: 50px;

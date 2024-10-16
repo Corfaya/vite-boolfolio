@@ -86,15 +86,6 @@ export default {
     }
 }
 
-.section {
-    background-color: $primaryText;
-    color: $hover;
-    margin-bottom: 50px;
-    h1 {
-        text-shadow: 3px 2px 1px $body;
-    }
-}
-
 nav {
     background-color: $body !important;
     .pagination {

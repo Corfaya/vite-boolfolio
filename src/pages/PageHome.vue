@@ -26,7 +26,7 @@ export default {
             <div class="col-12">
                 <div class="welcome text-center py-5">
                     <h1 class="t-50">Welcome to my <strong>Portfolio</strong></h1>
-                    <p class="t-26">I am a Fullstack Web Developer with a passion for building web applications.</p>
+                    <p class="t-26 text-white">I am a Fullstack Web Developer with a passion for building web applications.</p>
                 </div>
             </div>
         </div>
