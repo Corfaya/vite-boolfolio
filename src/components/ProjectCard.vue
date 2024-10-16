@@ -13,15 +13,15 @@ export default {
         <div class="card-title px-3 pt-3">
             <h3 class="text-orange">{{project.name}}</h3>
             <div v-if="project.technologies && project.technologies.length > 0">
-                <p class="m-0">Creato con:</p>
+                <p class="m-0">Created with:</p>
                 <ul class="list-unstyled d-flex m-0">
                     <li v-for="tech in project.technologies" :key="tech.id" class="pe-2 text-orange">{{tech.name}}</li>
                 </ul>
             </div>
         </div>
         <div class="card-body">
-            <p v-if="project.type" class="text-end">Tipo di lavoro: <strong class="text-orange">{{project.type.name}}</strong></p>
-            <p class="text-end">Data upload: <strong class="text-orange">{{project.date_of_upload}} </strong></p>
+            <p v-if="project.type" class="text-end">Field: <strong class="text-orange">{{project.type.name}}</strong></p>
+            <p class="text-end">Upload data: <strong class="text-orange">{{project.date_of_upload}} </strong></p>
             <p class="card-text mt-5">{{project.description}}</p>
         </div>
     </div>

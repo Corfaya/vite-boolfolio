@@ -35,7 +35,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center fw-bolder py-5">I miei ultimi progetti</h2>
+                    <h2 class="text-center fw-bolder py-5">My latest projects</h2>
                 </div>
                 <ProjectCard v-for="project in projects" :key="project.id" :project="project"/>
             </div>

@@ -6,7 +6,7 @@ export default {
 }
 </script>
 <template>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg nav-head">
         <div class="container-fluid">
             <div class="logo-box">
                 <img src="../assets/logo-fake.jpg" alt="Logo">
@@ -28,7 +28,7 @@ export default {
 </template>
 <style lang="scss">
 @import '../styles/app.scss';
-nav {
+.nav-head {
     box-shadow: 0 2px 10px rgb(66, 66, 66);
 }
 .logo-box {

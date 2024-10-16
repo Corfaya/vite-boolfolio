@@ -43,7 +43,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="py-5 text-center fw-bolder">Sfoglia i miei progetti</h1>
+                    <h1 class="py-5 text-center fw-bolder">Browse my projects</h1>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="py-5 text-center fw-bolder">Su di me</h1>
+                    <h1 class="py-5 text-center fw-bolder">Something about me</h1>
                 </div>
             </div>
         </div>
@@ -16,17 +16,17 @@ export default {
 
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-8 d-flex">
+            <div class="col-12 col-lg-8 d-flex">
                 <div class="about-section p-4 align-self-center me-5">
-                    <p>I hold a degree in History and Philosophy, with a master in Theoretical Philosophy. In a completely unexpected way, I discovered a new passion for web development and decided to turn it into a career. Today, I aim to work as a <strong>full stack web developer</strong>, combining my humanistic background with technical skills to create innovative digital solutions. I love taking on new challenges, seeking connections between critical thinking and coding.</p>
-                    <div class="d-flex justify-content-between align-items-center mt-5">
-                        <p><strong><</strong>HappyCoding <strong>/></strong></p>
-                        <p class="t-12 text-end">P.s. quella a destra non so chi sia</p>
+                    <p class="description">I hold a degree in History and Philosophy, with a master in Theoretical Philosophy. In a completely unexpected way, I discovered a new passion for web development and decided to turn it into a career. Today, I aim to work as a <strong>full stack web developer</strong>, combining my humanistic background with technical skills to create innovative digital solutions. I love taking on new challenges, seeking connections between critical thinking and coding.</p>
+                    <div class="about-footer d-flex justify-content-between align-items-center mt-5">
+                        <p class="final-tag"><strong><</strong>HappyCoding <strong>/></strong></p>
+                        <p class="t-12 text-end">P.S. I don't know who the person in the image is</p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
-                <div class="img-box">
+            <div class="col-12 col-lg-4 d-flex justify-content-center">
+                <div class="img-box align-self-center">
                     <img src="../assets/girl_dev.jpg" alt="Girl developer">
                 </div>
             </div>
@@ -45,8 +45,8 @@ export default {
 }
 
 .img-box {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     padding: 30px;
     border-radius: 50px;
     box-shadow: 0 0 10px 5px #252525;
@@ -67,6 +67,44 @@ export default {
     color: #fff;
     strong {
         color: $hover;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .img-box {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .img-box {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about-section {
+        .description {
+            font-size: 14px;
+        }
+        .about-footer {
+            flex-direction: column;
+            .final-tag {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .img-box {
+        width: 400px;
+        height: 400px;
+        margin-top: 50px;
+    }
+
+    .about-section {
+        margin: 0 !important;
     }
 }
 </style>
