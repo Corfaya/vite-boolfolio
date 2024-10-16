@@ -45,9 +45,9 @@ export default {
                     <p v-if="project.type">Field: <strong class="text-orange">{{project.type.name}}</strong></p>
                     <p v-else>Field of work not specified</p>
                     <p>Upload data: <strong class="text-orange">{{project.date_of_upload}} </strong></p>
-                    <div v-if="project.technologies && project.technologies.length > 0">
+                    <div v-if="project.technologies && project.technologies.length > 0" class="d-flex">
                         <p class="m-0">Created with:</p>
-                        <ul class="list-unstyled d-flex m-0">
+                        <ul class="list-unstyled d-flex m-0 ms-2">
                             <li v-for="tech in project.technologies" :key="tech.id" class="pe-2 text-orange">{{tech.name}}</li>
                         </ul>
                     </div>
@@ -89,6 +89,8 @@ export default {
         border: 3px solid $hover;
         box-shadow: 0 0 10px 5px #363636;
         img {
+            width: 100%;
+            height: 100%;
             max-width: 100%;
             max-height: 100%;
             object-fit: cover;

@@ -3,6 +3,7 @@ import PageHome from "./pages/PageHome.vue";
 import PageProject from "./pages/PageProject.vue";
 import PageAbout from "./pages/PageAbout.vue";
 import PageSingleCard from "./pages/PageSingleCard.vue";
+import PageNotFound from "./pages/PageNotFound.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -26,6 +27,11 @@ const router = createRouter({
             path: '/about',
             name: 'about',
             component: PageAbout
+        },
+        {
+            path: '/:notFound',
+            name: 'notfound',
+            component: PageNotFound
         }
     ]
 })
