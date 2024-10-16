@@ -9,7 +9,11 @@ export default {
 <template>
 <div class="col-12 col-md-6 col-lg-4">
     <div class="card">
-        <div class="img-box"><img :src="project.preview.startsWith('http') ? project.preview : `http://127.0.0.1:8000/storage/${project.preview}`" :alt="project.name" class="card-img-top"></div>
+        <div class="img-box">
+            <router-link :to="{ name: 'project', params: {slug: project.slug} }">
+            <img :src="project.preview.startsWith('http') ? project.preview : `http://127.0.0.1:8000/storage/${project.preview}`" :alt="project.name" class="card-img-top">
+        </router-link>
+        </div>
         <div class="card-title px-3 pt-3">
             <h3 class="text-orange">{{project.name}}</h3>
             <div v-if="project.technologies && project.technologies.length > 0">
@@ -38,7 +42,6 @@ export default {
     position: relative;
     transition: all 0.7s ease;
     z-index: 1;
-    cursor: pointer;
     &:hover {
         transform: translate(-10px, -10px);
         z-index: 2;
