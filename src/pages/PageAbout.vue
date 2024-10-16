@@ -8,7 +8,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="py-5 text-center fw-bolder">Something about me</h1>
+                    <h1 class="py-5 my-5 text-center fw-bolder">Something about me</h1>
                 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@ export default {
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-8 d-flex">
-                <div class="about-section p-4 align-self-center me-5">
+                <div class="about-section p-5 align-self-center me-5">
                     <p class="description">I hold a degree in History and Philosophy, with a master in Theoretical Philosophy. In a completely unexpected way, I discovered a new passion for web development and decided to turn it into a career. Today, I aim to work as a <strong>full stack web developer</strong>, combining my humanistic background with technical skills to create innovative digital solutions. I love taking on new challenges, seeking connections between critical thinking and coding.</p>
                     <div class="about-footer d-flex justify-content-between align-items-center mt-5">
                         <p class="final-tag"><strong><</strong>HappyCoding <strong>/></strong></p>
