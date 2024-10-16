@@ -19,6 +19,11 @@ const router = createRouter({
             component: PageProject
         },
         {
+            path: '/projects/:notFound',
+            name: 'projects-notfound',
+            component: PageNotFound
+        },
+        {
             path: '/projects/:slug',
             name: 'project',
             component: PageSingleCard
@@ -27,6 +32,11 @@ const router = createRouter({
             path: '/about',
             name: 'about',
             component: PageAbout
+        },
+        {
+            path: '/about/:notFound',
+            name: 'about-notfound',
+            component: PageNotFound
         },
         {
             path: '/:notFound',

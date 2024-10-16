@@ -36,7 +36,7 @@ export default {
     <div class="container my-5">
         <div class="row g-3">
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-end">
-                <div class="img-p-box">
+                <div v-if="project.preview" class="img-p-box">
                     <img :src="project.preview.startsWith('http') ? project.preview : `http://127.0.0.1:8000/storage/${project.preview}`" :alt="project.name">
                 </div>
             </div>
@@ -47,7 +47,7 @@ export default {
                     <p>Upload data: <strong class="text-orange">{{project.date_of_upload}} </strong></p>
                     <div v-if="project.technologies && project.technologies.length > 0" class="d-flex">
                         <p class="m-0">Created with:</p>
-                        <ul class="list-unstyled d-flex m-0 ms-2">
+                        <ul class="list-unstyled d-flex m-0 m">
                             <li v-for="tech in project.technologies" :key="tech.id" class="pe-2 text-orange">{{tech.name}}</li>
                         </ul>
                     </div>
