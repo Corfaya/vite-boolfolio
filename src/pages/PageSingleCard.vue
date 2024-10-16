@@ -47,7 +47,7 @@ export default {
                     <p>Upload data: <strong class="text-orange">{{project.date_of_upload}} </strong></p>
                     <div v-if="project.technologies && project.technologies.length > 0" class="d-flex">
                         <p class="m-0">Created with:</p>
-                        <ul class="list-unstyled d-flex m-0 m">
+                        <ul class="list-unstyled d-flex m-0 ms-2">
                             <li v-for="tech in project.technologies" :key="tech.id" class="pe-2 text-orange">{{tech.name}}</li>
                         </ul>
                     </div>
