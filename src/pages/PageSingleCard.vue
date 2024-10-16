@@ -1,5 +1,6 @@
 <script>
 import { store } from '../store';
+import axios from 'axios';
 export default {
     data() {
         return {
@@ -8,8 +9,8 @@ export default {
     },
     methods: {
         getProjectDetails(){
-            let projUrl = `${url}${epProjects}`
-            axios.get(`${projUrl}${this.$route.params.slug}`).then((res) => {
+            let projUrl = `${store.url}${store.epProjects}`
+            axios.get(`${projUrl}/${this.$route.params.slug}`).then((res) => {
                 console.log(res)
             })
         }
