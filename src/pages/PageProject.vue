@@ -21,7 +21,7 @@ export default {
     methods: {
         getProjects() {
             let urlProject = `${store.url}${store.epProjects}`
-            console.log(urlProject)
+            
             axios.get(urlProject).then((res) => {
                 this.projects = res.data.results.data;
                 this.current_page = res.data.results.current_page;
