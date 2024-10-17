@@ -1,7 +1,6 @@
 <script>
 import axios from 'axios';
 import { store } from '../store';
-import { errorMessages } from 'vue/compiler-sfc';
 export default {
     data() {
         return {
@@ -38,16 +37,18 @@ export default {
             axios.post(`${store.url}${store.epContacts}`, info).then((res) => {
                 if (res.data.success) {
                     this.name = '',
-                        this.surname = '',
-                        this.phone = '',
-                        this.email_address = '',
-                        this.content = ''
+                    this.surname = '',
+                    this.phone = '',
+                    this.email_address = '',
+                    this.content = ''
                     //bonus 2
                     this.sending = false
                     this.sentSuccess = true
                 } else {
                     // bonus 1
                     this.errors = res.data.errors
+
+                    this.sending = false
                 }
             })
         }
