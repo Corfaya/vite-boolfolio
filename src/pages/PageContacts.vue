@@ -8,7 +8,7 @@ export default {
 }
 </script>
 <template>
-    <div class="bg-main">
+    <div class="bg-main py-5">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -19,19 +19,19 @@ export default {
     </div>
     <div class="container">
         <div class="row">
+            <div class="col-12 gy-4 gx-3">
+                <FormContact />
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12">
-                <ul class="list-unstyled d-flex">
+                <ul class="list-unstyled d-flex justify-content-center text-white my-5">
                     <li><strong>Address</strong>: Via dei matti, 0</li>
                     <li><strong>City</strong>: Silent hill</li>
                     <li><strong>E-mail</strong>: prova@test.it</li>
                     <li><strong>Phone</strong>: 0000/000000</li>
                     <li><strong>Pec</strong>: prova@pec.it</li>
                 </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <FormContact />
             </div>
         </div>
     </div>

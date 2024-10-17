@@ -23,14 +23,20 @@ export default {
             }
 
             axios.post(`${store.url}${store.epContacts}`, info).then((res) => {
-                console.log(res);
+                if (res.data.success) {
+                    this.name = '',
+                    this.surname = '',
+                    this.phone = '',
+                    this.email_address= '',
+                    this.content = ''
+                }
             })
         }
     }
 }
 </script>
 <template>
-    <form method="POST" @submit.prevent="send()">
+    <form method="POST" @submit.prevent="send" class="my-5">
         <div class="row">
             <div class="col-12 col-md-6">
                 <label for="name" class="control-label">Name</label>
@@ -42,15 +48,18 @@ export default {
             </div>
             <div class="col-12 col-md-6">
                 <label for="phone" class="control-label">Phone number</label>
-                <input v-model="phone" type="text" name="phone" id="phone" placheholder="Phone number here" class="form-control">
+                <input v-model="phone" type="text" name="phone" id="phone" placheholder="Phone number here"
+                    class="form-control">
             </div>
             <div class="col-12 col-md-6">
                 <label for="email_address" class="control-label">Email</label>
-                <input v-model="email_address" type="email" name="email_address" id="email_address" placheholder="Your email address" class="form-control">
+                <input v-model="email_address" type="email" name="email_address" id="email_address"
+                    placheholder="Your email address" class="form-control">
             </div>
             <div class="col-12">
                 <label for="Content" class="control-label">Your message:</label>
-                <textarea v-model="content" name="content" id="content" class="form-control" placeholder="Space for your message"></textarea>
+                <textarea v-model="content" name="content" id="content" class="form-control"
+                    placeholder="Space for your message"></textarea>
             </div>
             <div class="col-12">
                 <button type="submit" class="py-3 px-4 my-5">Send</button>
@@ -60,14 +69,23 @@ export default {
 </template>
 <style lang='scss' scoped>
 @import '../styles/app.scss';
-    button {
-        background-color: $hover;
-        color: $primaryText;
-        box-shadow: 0 0 10px 5px rgb(70, 70, 70);
-        transition: all 0.5s;
-        &:hover {
-            background-color: $primaryText;
-            color: $header;
-        }
+
+form {
+    label {
+        margin: 10px 0;
+        color: $header;
     }
+}
+
+button {
+    background-color: $hover;
+    color: $primaryText;
+    box-shadow: 0 0 10px 5px rgb(70, 70, 70);
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: $primaryText;
+        color: $header;
+    }
+}
 </style>
