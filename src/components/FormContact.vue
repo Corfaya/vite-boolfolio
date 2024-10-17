@@ -53,7 +53,7 @@ export default {
                 <textarea v-model="content" name="content" id="content" class="form-control" placeholder="Space for your message"></textarea>
             </div>
             <div class="col-12">
-                <button type="submit">Send</button>
+                <button type="submit" class="py-3 px-4 my-5">Send</button>
             </div>
         </div>
     </form>

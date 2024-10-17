@@ -4,6 +4,7 @@ import PageProject from "./pages/PageProject.vue";
 import PageAbout from "./pages/PageAbout.vue";
 import PageSingleCard from "./pages/PageSingleCard.vue";
 import PageNotFound from "./pages/PageNotFound.vue";
+import PageContacts from "./pages/PageContacts.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -36,6 +37,16 @@ const router = createRouter({
         {
             path: '/about/:pathMatch(.*)*',
             name: 'about-notfound',
+            component: PageNotFound
+        },
+        {
+            path: '/contacts',
+            name: 'contacts',
+            component: PageContacts
+        },
+        {
+            path: '/contacts/:pathMatch(.*)*',
+            name: 'contacts-notfound',
             component: PageNotFound
         },
         {
