@@ -5,15 +5,20 @@ export default {
     data() {
         return {
             store,
-            project: ''
+            project: '',
+            success: false
         }
     },
     methods: {
         getProjectDetails(){
             let projUrl = `${store.url}${store.epProjects}`
             axios.get(`${projUrl}/${this.$route.params.slug}`).then((res) => {
-                console.log(res.data.results)
-                this.project = res.data.results
+                if(res.data.success){
+                    this.project = res.data.results
+                    this.success = true
+                } else {
+                    this.$router.push({name: projects-notfound})
+                }
             })
         }
     },

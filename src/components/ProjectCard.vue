@@ -26,7 +26,7 @@ export default {
         <div class="card-body">
             <p v-if="project.type" class="text-end">Field: <strong class="text-orange">{{project.type.name}}</strong></p>
             <p class="text-end">Upload data: <strong class="text-orange">{{project.date_of_upload}} </strong></p>
-            <p class="card-text mt-5">{{project.description}}</p>
+            <!-- <p class="card-text mt-5">{{project.description}}</p> -->
         </div>
     </div>
 </div>
@@ -38,7 +38,7 @@ export default {
     background-color: $primaryText;
     border: none;
     box-shadow: 0 0 10px #000000b3;
-    min-height: 700px;
+    min-height: 450px;
     position: relative;
     transition: all 0.7s ease;
     z-index: 1;

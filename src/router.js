@@ -19,7 +19,7 @@ const router = createRouter({
             component: PageProject
         },
         {
-            path: '/projects/:notFound',
+            path: '/projects/:pathMatch(.*)*',
             name: 'projects-notfound',
             component: PageNotFound
         },
@@ -34,12 +34,12 @@ const router = createRouter({
             component: PageAbout
         },
         {
-            path: '/about/:notFound',
+            path: '/about/:pathMatch(.*)*',
             name: 'about-notfound',
             component: PageNotFound
         },
         {
-            path: '/:notFound',
+            path: '/:pathMatch(.*)*',
             name: 'notfound',
             component: PageNotFound
         }
