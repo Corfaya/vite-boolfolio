@@ -4,6 +4,8 @@ import { store } from '../store';
 export default {
     data() {
         return {
+            // bonus 2
+            sending: false,
             store,
             name: '',
             surname: '',
@@ -14,6 +16,9 @@ export default {
     },
     methods: {
         send() {
+            // bonus 2
+            this.sending = true
+
             const info = {
                 name: this.name,
                 surname: this.surname,
@@ -29,6 +34,8 @@ export default {
                     this.phone = '',
                     this.email_address= '',
                     this.content = ''
+                    //bonus 2
+                    this.sending = false
                 }
             })
         }
@@ -62,7 +69,8 @@ export default {
                     placeholder="Space for your message"></textarea>
             </div>
             <div class="col-12">
-                <button type="submit" class="py-3 px-4 my-5">Send</button>
+                <!-- with bonus 2: -->
+                <button type="submit" class="py-3 px-4 my-5" :disabled="sending">{{sending ? 'Sending message...' : 'Send'}}</button>
             </div>
         </div>
     </form>
