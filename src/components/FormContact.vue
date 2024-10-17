@@ -6,6 +6,8 @@ export default {
         return {
             // bonus 2
             sending: false,
+            sentSuccess: false,
+
             store,
             name: '',
             surname: '',
@@ -36,6 +38,7 @@ export default {
                     this.content = ''
                     //bonus 2
                     this.sending = false
+                    this.sentSuccess = true
                 }
             })
         }
@@ -68,12 +71,15 @@ export default {
                 <textarea v-model="content" name="content" id="content" class="form-control"
                     placeholder="Space for your message"></textarea>
             </div>
-            <div class="col-12">
+            <div class="col-12 d-flex justify-content-center">
                 <!-- with bonus 2: -->
-                <button type="submit" class="py-3 px-4 my-5" :disabled="sending">{{sending ? 'Sending message...' : 'Send'}}</button>
+                <button type="submit" class="py-3 px-4 mt-5 mb-2" :disabled="sending">{{sending ? 'Sending message...' : 'Send'}}</button>
             </div>
         </div>
     </form>
+    <div class="alert text-center fw-bolder" v-if="sentSuccess">
+        Message sent successfully. We'll contact you soon!
+    </div>
 </template>
 <style lang='scss' scoped>
 @import '../styles/app.scss';
@@ -95,5 +101,11 @@ button {
         background-color: $primaryText;
         color: $header;
     }
+}
+
+.alert {
+    color: $hover;
+    background-color: $primaryText;
+    letter-spacing: 2px;
 }
 </style>

@@ -24,12 +24,12 @@ export default {
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <ul class="list-unstyled d-flex justify-content-center text-white my-5">
-                    <li><strong>Address</strong>: Via dei matti, 0</li>
-                    <li><strong>City</strong>: Silent hill</li>
-                    <li><strong>E-mail</strong>: prova@test.it</li>
-                    <li><strong>Phone</strong>: 0000/000000</li>
+            <div class="col-12 text-white text-center my-4">
+                <p class="fw-bolder">Otherwise, you can contact me at my addresses or by calling me:</p>
+                <ul class="list-unstyled d-flex justify-content-center">
+                    <li><strong>Address</strong>: Via dei matti, 0, <strong>Silent Hill (SH)</strong> - </li>
+                    <li><strong>E-mail</strong>: prova@test.it - </li>
+                    <li><strong>Phone</strong>: 0000/000000 - </li>
                     <li><strong>Pec</strong>: prova@pec.it</li>
                 </ul>
             </div>
