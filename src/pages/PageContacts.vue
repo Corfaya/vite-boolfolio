@@ -1,6 +1,10 @@
 <script>
+import FormContact from '../components/FormContact.vue';
+
 export default {
-    
+    components: {
+        FormContact
+    }
 }
 </script>
 <template>
@@ -27,7 +31,7 @@ export default {
         </div>
         <div class="row">
             <div class="col-12">
-                <form method="POST" @submit.prevent="send"></form>
+                <FormContact />
             </div>
         </div>
     </div>
