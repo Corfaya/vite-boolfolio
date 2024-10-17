@@ -21,12 +21,16 @@ export default {
                 email_address: this.email_address,
                 content: this.content,
             }
+
+            axios.post(`${store.url}${store.epContacts}`, info).then((res) => {
+                console.log(res);
+            })
         }
     }
 }
 </script>
 <template>
-    <form method="POST" @submit.prevent="send">
+    <form method="POST" @submit.prevent="send()">
         <div class="row">
             <div class="col-12 col-md-6">
                 <label for="name" class="control-label">Name</label>
