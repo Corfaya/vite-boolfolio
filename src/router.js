@@ -5,6 +5,7 @@ import PageAbout from "./pages/PageAbout.vue";
 import PageSingleCard from "./pages/PageSingleCard.vue";
 import PageNotFound from "./pages/PageNotFound.vue";
 import PageContacts from "./pages/PageContacts.vue";
+import PageThankYou from "./pages/PageThankYou.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -43,6 +44,11 @@ const router = createRouter({
             path: '/contacts',
             name: 'contacts',
             component: PageContacts
+        },
+        {
+            path: '/sent-message',
+            name: 'thank-you',
+            component: PageThankYou
         },
         {
             path: '/contacts/:pathMatch(.*)*',

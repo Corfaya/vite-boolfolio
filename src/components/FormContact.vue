@@ -6,7 +6,7 @@ export default {
         return {
             // bonus 2
             sending: false,
-            sentSuccess: false,
+            // sentSuccess: false,
 
             store,
             name: '',
@@ -43,7 +43,9 @@ export default {
                     this.content = ''
                     //bonus 2
                     this.sending = false
-                    this.sentSuccess = true
+                    // this.sentSuccess = true
+
+                    this.$router.push({name: 'thank-you'})
                 } else {
                     // bonus 1
                     this.errors = res.data.errors
@@ -96,7 +98,7 @@ export default {
                 </div>
             </div>
             <div class="col-12">
-                <label for="Content" class="control-label">Your message:</label>
+                <label for="content" class="control-label">Your message:</label>
                 <textarea v-model="content" name="content" id="content" class="form-control"
                     :class="errors.content ? 'is-invalid' : ''" placeholder="Space for your message"></textarea>
                 <!-- bonus 1 -->
@@ -111,9 +113,9 @@ export default {
             </div>
         </div>
     </form>
-    <div class="alert fw-bolder" v-if="sentSuccess">
+    <!-- <div class="alert fw-bolder" v-if="sentSuccess">
         Message sent successfully. We'll contact you soon!
-    </div>
+    </div> -->
 </template>
 <style lang='scss' scoped>
 @import '../styles/app.scss';
